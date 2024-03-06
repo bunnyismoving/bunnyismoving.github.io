@@ -1,0 +1,526 @@
+
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=yes"/>
+    <meta charset="UTF-8" />
+    <title>Bunny's Avatar</title>
+	<script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="jquery/jQueryRotate.js"></script>
+	<script type="text/javascript" src="jquery/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="jquery/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js"></script>
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="WU,PingYen,Product,design,portfolio">
+    <link href="index.css" rel="stylesheet">
+	 <LINK REL="SHORTCUT ICON" HREF="favicon.ico"> 
+	</head>
+  <body>
+	<div id="load">
+		<div id="load_photo">
+		<div id="load_A"></div>
+		<div id="load_B"></div>
+		<div id="load_C"></div>
+		</div>
+	</div>
+<div id="main">
+	<div id="pop">
+		<div id="closePop" onclick="popCloseClick()"></div>
+	</div>
+		<div id="header" >
+			<div id="nextIcon" onclick="finish()" ></div>
+			<div id="randomIcon" onclick="randomProp()" onmouseover="onMouseOverRandomIcon()" onmouseout="onMouseOutRandomIcon()">
+				<div id="movingRanPic">
+					<div id="ranPic1" class="ranPic"></div>
+					<div id="ranPic2" class="ranPic"></div>
+					<div id="ranPic3" class="ranPic"></div>
+				</div>
+			</div>
+			<div id="again" onclick="reload()" ></div>
+			<div id="language" onclick="languageSw()" ></div>
+		</div>
+		
+		<div id="avatar">
+			<a id="save">
+			<div id="bas1" class="avatarBA"><img class="imgAvatar" src="image/bas1.png"></div>
+			<div id="bas2" class="avatarBA"><img class="imgAvatar" src="image/bas2.png"></div>
+			<div id="bas3" class="avatarBA"><img class="imgAvatar" src="image/bas3.png"></div>
+			<div id="bas4" class="avatarBA"><img class="imgAvatar" src="image/bas4.png"></div>
+			<div id="bas5" class="avatarBA"><img class="imgAvatar" src="image/bas5.png"></div>
+			<div id="bas6" class="avatarBA"><img class="imgAvatar" src="image/bas6.png"></div>
+			<div id="bas7" class="avatarBA"><img class="imgAvatar" src="image/bas7.png"></div>
+			<div id="bas8" class="avatarBA"><img class="imgAvatar" src="image/bas8.png"></div>
+			<div id="bas9" class="avatarBA"><div class="imgAvatar" style="background-color: #abca8d;"></div></div>
+			<div id="bas10" class="avatarBA"><div class="imgAvatar" style="background-color: #abd7e3;"></div></div>
+			<div id="bas11" class="avatarBA"><div class="imgAvatar" style="background-color: #b1b1b1;"></div></div>
+			<div id="bas12" class="avatarBA"><div class="imgAvatar" style="background-color: #df827a;"></div></div>
+			<div id="bas13" class="avatarBA"><div class="imgAvatar" style="background-color: #f6c1c1;"></div></div>
+			<div id="bas14" class="avatarBA"><div class="imgAvatar" style="background-color: #faba70;"></div></div>
+			<div id="bas15" class="avatarBA"><div class="imgAvatar" style="background-color: #ffffff;"></div></div>
+			<div id="bg1" class="avatarB"><img class="imgAvatar" src="image/bg1.png"></div>
+			<div id="bg2" class="avatarB"><img class="imgAvatar" src="image/bg2.png"></div>
+			<div id="bg3" class="avatarB"><img class="imgAvatar" src="image/bg3.png"></div>
+			<div id="bg4" class="avatarB"><img class="imgAvatar" src="image/bg4.png"></div>
+			<div id="bg5" class="avatarB"><img class="imgAvatar" src="image/bg5.png"></div>
+			<div id="bg6" class="avatarB"><img class="imgAvatar" src="image/bg6.png"></div>
+			<div id="bg7" class="avatarB"><img class="imgAvatar" src="image/bg7.png"></div>
+			<div id="bg8" class="avatarB"><img class="imgAvatar" src="image/bg8.png"></div>
+			<div id="bg9" class="avatarB"><img class="imgAvatar" src="image/bg9.png"></div>
+			<div id="bg10" class="avatarB"><img class="imgAvatar" src="image/bg10.png"></div>
+			<div id="bg11" class="avatarB"><img class="imgAvatar" src="image/bg11.png"></div>
+			<div id="bg12" class="avatarB"><img class="imgAvatar" src="image/bg12.png"></div>
+			<div id="bg13" class="avatarB"><img class="imgAvatar" src="image/bg13.png"></div>
+			<div id="eye1" class="avatarE"><img class="imgAvatar" src="image/eye1.png"></div>
+			<div id="eye2" class="avatarE"><img class="imgAvatar" src="image/eye2.png"></div>
+			<div id="eye3" class="avatarE"><img class="imgAvatar" src="image/eye3.png"></div>
+			<div id="eye4" class="avatarE"><img class="imgAvatar" src="image/eye4.png"></div>
+			<div id="eye5" class="avatarE"><img class="imgAvatar" src="image/eye5.png"></div>
+			<div id="eye6" class="avatarE"><img class="imgAvatar" src="image/eye6.png"></div>
+			<div id="eye7" class="avatarE"><img class="imgAvatar" src="image/eye7.png"></div>
+			<div id="eye8" class="avatarE"><img class="imgAvatar" src="image/eye8.png"></div>
+			<div id="eye9" class="avatarE"><img class="imgAvatar" src="image/eye9.png"></div>
+			<div id="eye10" class="avatarE"><img class="imgAvatar" src="image/eye10.png"></div>
+			<div id="eye11" class="avatarE"><img class="imgAvatar" src="image/eye11.png"></div>
+			<div id="eye12" class="avatarE"><img class="imgAvatar" src="image/eye12.png"></div>
+			<div id="eye13" class="avatarE"><img class="imgAvatar" src="image/eye13.png"></div>
+			<div id="eye14" class="avatarE"><img class="imgAvatar" src="image/eye14.png"></div>
+			<div id="eye15" class="avatarE"><img class="imgAvatar" src="image/eye15.png"></div>
+			<div id="mou1" class="avatarM"><img class="imgAvatar" src="image/mou1.png"></div>
+			<div id="mou2" class="avatarM"><img class="imgAvatar" src="image/mou2.png"></div>
+			<div id="mou3" class="avatarM"><img class="imgAvatar" src="image/mou3.png"></div>
+			<div id="mou4" class="avatarM"><img class="imgAvatar" src="image/mou4.png"></div>
+			<div id="mou5" class="avatarM"><img class="imgAvatar" src="image/mou5.png"></div>
+			<div id="mou6" class="avatarM"><img class="imgAvatar" src="image/mou6.png"></div>
+			<div id="mou7" class="avatarM"><img class="imgAvatar" src="image/mou7.png"></div>
+			<div id="mou8" class="avatarM"><img class="imgAvatar" src="image/mou8.png"></div>
+			<div id="mou9" class="avatarM"><img class="imgAvatar" src="image/mou9.png"></div>
+			<div id="mou10" class="avatarM"><img class="imgAvatar" src="image/mou10.png"></div>
+			<div id="mou11" class="avatarM"><img class="imgAvatar" src="image/mou11.png"></div>
+			<div id="mou12" class="avatarM"><img class="imgAvatar" src="image/mou12.png"></div>
+			<div id="mou13" class="avatarM"><img class="imgAvatar" src="image/mou13.png"></div>
+			<div id="mou14" class="avatarM"><img class="imgAvatar" src="image/mou14.png"></div>
+			<div id="mou15" class="avatarM"><img class="imgAvatar" src="image/mou15.png"></div>
+			<div id="acc1" class="avatarA"><img class="imgAvatar" src="image/acc1.png"></div>
+			<div id="acc2" class="avatarA"><img class="imgAvatar" src="image/acc2.png"></div>
+			<div id="acc3" class="avatarA"><img class="imgAvatar" src="image/acc3.png"></div>
+			<div id="acc4" class="avatarA"><img class="imgAvatar" src="image/acc4.png"></div>
+			<div id="acc5" class="avatarA"><img class="imgAvatar" src="image/acc5.png"></div>
+			<div id="acc6" class="avatarA"><img class="imgAvatar" src="image/acc6.png"></div>
+			<div id="acc7" class="avatarA"><img class="imgAvatar" src="image/acc7.png"></div>
+			<div id="acc8" class="avatarA"><img class="imgAvatar" src="image/acc8.png"></div>
+			<div id="fac1" class="avatarF"><img class="imgAvatar" src="image/fac1.png"></div>
+			<div id="fac2" class="avatarF"><img class="imgAvatar" src="image/fac2.png"></div>
+			<div id="fac3" class="avatarF"><img class="imgAvatar" src="image/fac3.png"></div>
+			<div id="fac4" class="avatarF"><img class="imgAvatar" src="image/fac4.png"></div>
+			<div id="fac5" class="avatarF"><img class="imgAvatar" src="image/fac5.png"></div>
+			<div id="fac6" class="avatarF"><img class="imgAvatar" src="image/fac6.png"></div>
+			<div id="fac7" class="avatarF"><img class="imgAvatar" src="image/fac7.png"></div>
+			<div id="fac8" class="avatarF"><img class="imgAvatar" src="image/fac8.png"></div>
+			<div id="fac9" class="avatarF"><img class="imgAvatar" src="image/fac9.png"></div>
+			<div id="fac10" class="avatarF"><img class="imgAvatar" src="image/fac10.png"></div>
+			
+			</a>
+			
+			<div id="whiteFrame">
+				<img id="imgResult">
+			</div>
+			
+		</div>
+		<div id="tabBar">
+			<div id="bgTab" class="tab" onclick="tabClick('bg')"></div>
+			<div id="eyeTab" class="tab" onclick="tabClick('eye')"></div>
+			<div id="mouTab" class="tab" onclick="tabClick('mou')"></div>
+			<div id="facTab" class="tab" onclick="tabClick('fac')"></div>
+			<div id="accTab" class="tab" onclick="tabClick('acc')"></div>
+			<div id="basTab" class="tab" onclick="tabClick('bas')"></div>
+		</div>
+		<div id="contentArea">
+			<div id="bgContent" class="content">
+				<div class="contentProp" id="conbg1" onclick="contentClick(1,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg2" onclick="contentClick(2,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg3" onclick="contentClick(3,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg4" onclick="contentClick(4,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg5" onclick="contentClick(5,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg6" onclick="contentClick(6,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg7" onclick="contentClick(7,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg8" onclick="contentClick(8,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg9" onclick="contentClick(9,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg10" onclick="contentClick(10,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg11" onclick="contentClick(11,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg12" onclick="contentClick(12,'#bg','B','bg')"><a></a></div>
+				<div class="contentProp" id="conbg13" onclick="contentClick(13,'#bg','B','bg')"><a></a></div>
+			</div>
+			<div id="eyeContent" class="content">
+				<div class="contentProp" id="conEye1" onclick="contentClick(1,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye2" onclick="contentClick(2,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye3" onclick="contentClick(3,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye4" onclick="contentClick(4,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye5" onclick="contentClick(5,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye6" onclick="contentClick(6,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye7" onclick="contentClick(7,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye8" onclick="contentClick(8,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye9" onclick="contentClick(9,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye10" onclick="contentClick(10,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye11" onclick="contentClick(11,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye12" onclick="contentClick(12,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye13" onclick="contentClick(13,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye14" onclick="contentClick(14,'#eye','E','Eye')"><a></a></div>
+				<div class="contentProp" id="conEye15" onclick="contentClick(15,'#eye','E','Eye')"><a></a></div>
+			</div>
+			<div id="mouContent" class="content">
+				<div class="contentProp" id="conMou1" onclick="contentClick(1,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou2" onclick="contentClick(2,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou3" onclick="contentClick(3,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou4" onclick="contentClick(4,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou5" onclick="contentClick(5,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou6" onclick="contentClick(6,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou7" onclick="contentClick(7,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou8" onclick="contentClick(8,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou9" onclick="contentClick(9,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou10" onclick="contentClick(10,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou11" onclick="contentClick(11,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou12" onclick="contentClick(12,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou13" onclick="contentClick(13,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou14" onclick="contentClick(14,'#mou','M','Mou')"><a></a></div>
+				<div class="contentProp" id="conMou15" onclick="contentClick(15,'#mou','M','Mou')"><a></a></div>
+			</div>
+			<div id="accContent" class="content">
+				<div class="contentProp" id="conAcc1" onclick="contentClick(1,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc2" onclick="contentClick(2,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc3" onclick="contentClick(3,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc4" onclick="contentClick(4,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc5" onclick="contentClick(5,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc6" onclick="contentClick(6,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc7" onclick="contentClick(7,'#acc','A','Acc')"><a></a></div>
+				<div class="contentProp" id="conAcc8" onclick="contentClick(8,'#acc','A','Acc')"><a></a></div>
+			</div>
+			<div id="basContent" class="content">
+				<div class="contentProp" id="conBas1" onclick="contentClick(1,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas2" onclick="contentClick(2,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas3" onclick="contentClick(3,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas4" onclick="contentClick(4,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas5" onclick="contentClick(5,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas6" onclick="contentClick(6,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas7" onclick="contentClick(7,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas8" onclick="contentClick(8,'#bas','BA','Bas')"><a></a></div>
+				<div class="contentProp" id="conBas9" onclick="contentClick(9,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas10" onclick="contentClick(10,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas11" onclick="contentClick(11,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas12" onclick="contentClick(12,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas13" onclick="contentClick(13,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas14" onclick="contentClick(14,'#bas','BA','Bas')"><span></span><a></a></div>
+				<div class="contentProp" id="conBas15" onclick="contentClick(15,'#bas','BA','Bas')"><span></span><a></a></div>
+
+			</div>
+			<div id="facContent" class="content">
+				<div class="contentProp" id="conFac1" onclick="contentClick(1,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac2" onclick="contentClick(2,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac3" onclick="contentClick(3,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac4" onclick="contentClick(4,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac5" onclick="contentClick(5,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac6" onclick="contentClick(6,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac7" onclick="contentClick(7,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac8" onclick="contentClick(8,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac9" onclick="contentClick(9,'#fac','F','Fac')"><a></a></div>
+				<div class="contentProp" id="conFac10" onclick="contentClick(10,'#fac','F','Fac')"><a></a></div>
+			</div>
+		</div>
+		
+		<div id="resultPage">
+			<div id="no-com"></div>
+			<div id="download" onclick="saveImg()"></div>
+			<div id="press-save"></div>
+			<div id="donateB" onclick="openLink('sup')"></div>
+			<div id="storeArea">
+				<div id="store1" class="store" onclick="openLink('shop')"></div>
+				<div id="store2" class="store"></div>
+			</div>
+
+			<div id="socialMedia">
+				<div id="followRabbit"></div>
+				<div id="smsArea">
+					<div id="inst" class="SMS" onclick="openLink('ig')"></div>
+					<div id="yt" class="SMS" onclick="openLink('yt')"></div>
+					<div id="line" class="SMS" onclick="openLink('line')"></div>
+					<div id="all" class="SMS" onclick="openLink('all')"></div>
+				</div>
+			</div>
+			
+		</div>
+		<div id="adArea"></div>
+		
+
+
+	<div id="footer">Copyright © 2024 Bunny is moving , All rights reserved</div>	
+</div>
+
+  </body>
+
+<script>
+
+$('#bg1').css('display','block');
+$('#eye1').css('display','block');
+$('#mou1').css('display','block');
+$('#acc1').css('display','block');
+
+function contentClick(a,t1,t2,t3){
+	$(t1+'Content > .contentProp').css({'background-color':'white'});
+	$(t1+'Content > .contentProp').css({'border':'dashed'});
+	$(t1+'Content > .contentProp > a').css({'display':'none'});
+	$('.avatar'+t2).css('display','none');
+	$(t1+a).css('display','block');
+	// $('.contentProp').animate({'background-color':'white'},0);
+	$('#con'+t3+a).animate({'background-color':'#FFCB65'},100);
+	$('#con'+t3+a).animate({'border':'solid'},100);
+	$('#con'+t3+a+'> a').css({'display':'block'},10);
+}
+
+function tabClick(tabname){
+	$('.content').css({'display':'none'});
+	$('#'+tabname+'Content').css({'display':'block'});
+	$('.tab').css({'background-color':'white'});
+	$('#'+tabname+'Tab').animate({'background-color':'#FFCB65'},100);
+
+}
+
+function popCloseClick(){
+	$('#pop').css({'display':'none'});
+}
+
+function randomProp(){
+	function getRandomInt(max) {
+  		return Math.floor(Math.random() * max);
+	}
+	contentClick(getRandomInt(8)+1,'#acc','A','Acc')
+	contentClick(getRandomInt(13)+1,'#bg','B','bg')
+	contentClick(getRandomInt(15)+1,'#eye','E','Eye')
+	contentClick(getRandomInt(15)+1,'#mou','M','Mou')
+	contentClick(getRandomInt(15)+1,'#bas','BA','Bas')
+	contentClick(getRandomInt(10)+1,'#fac','F','Fac')
+}
+
+function finish(){
+
+	function getRandomIntAD(max) {
+  		return Math.floor(Math.random() * max);
+	}
+
+	$('#tabBar').css({'display':'none'});
+	$('#nextIcon').css({'display':'none'});
+	$('#randomIcon').css({'display':'none'});
+	$('#contentArea').css({'display':'none'});
+	$('#resultPage').css({'display':'block'});
+	$('#again').css({'display':'block'});
+	$('#pop').css({'display':'block'});
+	$('#adArea').css({'display':'block'});
+
+	var adImg;
+	var adRam = getRandomIntAD(3);
+
+	if(adRam == 1){
+		adImg = "url('image/bas1.png')"
+	}else if(adRam == 2){
+		adImg = "url('image/bas2.png')"
+	}else if(adRam == 3){
+		adImg = "url('image/bas3.png')"
+	}
+	$('#adArea').css({'background-image': adImg});
+	$('#imgResult').css({'display':'block'});
+	//$('#whiteFrame').css({'display':'none'});
+	turnImg()
+	// $('.imgAvatar').css({'border-radius':'17px'});
+}
+
+
+$('.contentProp').hover(
+	function(){
+
+		$('.contentProp').css({'top':'0'});
+		$('.contentProp').css({'left':'0'});
+		$('.contentProp').css({'box-shadow':'0px 0px 0px black'});
+		$('.contentProp').css({'border':'dashed'});
+
+		$(this).animate({'top':'-5px','left':'-5px'},100,false);
+		// $(this).animate({'left':'-5px'},100,false);
+		$(this).css({'box-shadow':'5px 5px 0px black'},100);
+		$(this).css({'border':'solid'},100);
+	},2
+)
+
+function openLink(i){
+	var a
+	if(i=="sup"){
+		a="https://portaly.cc/bunnyismoving/support"
+	}else if(i=="ig"){
+		a="https://www.instagram.com/bunny_is_moving/"
+	}else if(i=="yt"){
+		a="https://www.youtube.com/@bunny_is_moving"
+	}else if(i=="all"){
+		a="https://portaly.cc/bunnyismoving"
+	}else if(i=="line"){
+		a="https://store.line.me/stickershop/author/108572/zh-Hant?lang=zh-Hant&utm_source=gnsh_staut"
+	}else if(i=='shop'){
+		a="https://myship.7-11.com.tw/general/detail/GM2212122639778"
+	}
+	window.open(a,"_blank")
+}
+
+function reload(){
+	location.reload();
+}
+
+function saveImg() {
+	// $('#whiteFrame').css({'display':'none'});
+
+    var element = document.querySelector("#save");
+    html2canvas(element, {
+        allowTaint: true,
+        useCORS: true,
+        onrendered: function(canvas) {
+            var download = document.createElement('a');
+			download.href = canvas.toDataURL("image/png");
+            download.download = "bunny.png";
+            download.click();
+        }
+    });
+	// $('#whiteFrame').css({'display':'none'});
+}
+function turnImg() {
+	$('.imgAvatar').css({'border-radius':'0'});
+
+    var element = document.querySelector("#save");
+    html2canvas(element, {
+        allowTaint: true,
+        useCORS: true,
+        onrendered: function(canvas) {
+			const imgResult = canvas.toDataURL('image/png');
+			document.getElementById('imgResult').src = imgResult
+        }
+    });
+	
+	// $('#whiteFrame').css({'display':'none'});
+}
+
+//Random icon animation start
+var randomImgNum=0;
+function onMouseOverRandomIcon(){
+	$('#movingRanPic').css('display','block');
+	if(randomImgNum == 0){
+		changeImage()
+	}
+}
+function onMouseOutRandomIcon(){
+	$('#movingRanPic').css('display','none');
+}
+function changeImage()
+{
+  setInterval(function(){
+	randomImgNum++;
+  if(randomImgNum >= 4)
+  {
+    randomImgNum=1;
+  }
+  $('.ranPic').css('display','none');
+  $('#ranPic'+randomImgNum).css('display','block');
+  },75)
+}
+//Random icon animation over
+
+var x = window.innerWidth;
+var z = window.innerHeight;
+var lan = "cht"
+
+function languageSw(){
+	if(lan=="cht"){
+		lan="en";
+		$('#language').css('background-image',"url('image/cht.png')");
+		$('#no-com').css('background-image',"url('image/no-com-en.png')");
+		$('#no-com').css('background-size',"90%");
+		$('#no-com').css('height',"45");
+		$('#download').css('background-image',"url('image/download-En.png')");
+		$('#donateB').css('background-image',"url('image/donate-En.png')");
+		$('#store1').css('background-image',"url('image/Bunny-Shop.png')");
+		$('#store1').css('background-size',"75%");
+		$('#store2').css('background-image',"url('image/Bunny-Co-branding.png')");
+		$('#store2').css('background-size',"85%");
+		$('#press-save').css('background-image',"url('image/Long-press-en.png')");
+		$('#press-save').css('background-size',"62%");
+
+
+	}else if(lan=="en"){
+		lan="cht";
+		$('#language').css('background-image',"url('image/En.png')");
+		$('#no-com').css('background-image',"url('image/no-com.png')");
+		$('#no-com').css('background-size',"60%");
+		$('#no-com').css('height',"30");
+		$('#download').css('background-image',"url('image/download.png')");
+		$('#donateB').css('background-image',"url('image/donate.png')");
+		$('#store1').css('background-image',"url('image/shop-words.png')");
+		$('#store1').css('background-size',"60%");
+		$('#store2').css('background-image',"url('image/shop2-words.png')");
+		$('#store2').css('background-size',"60%");
+		$('#press-save').css('background-image',"url('image/Long-press.png')");
+		$('#press-save').css('background-size',"55%");
+
+	}
+}
+// $(function(){
+// function loadAnimate(){
+// $('#load_A').animate({'left':0},1000);
+// $('#load_A').animate({'left':18},1000);
+
+// };
+// loadAnimate()
+// setInterval(loadAnimate,2500);
+// });
+
+function adjust(){
+if(x<641){
+	$('#main').css('width','550');
+	$('#header').css('width','550');
+	$('#tabBar').css('height','120');
+	$('#tabBar').css('margin-top','20');
+	$('.tab').css('height','50');
+	$('.tab').css('width','28%');
+	$('.tab').css('margin-top','10');
+	$('.tab').css('background-size','70%,auto');
+	$('#pop').css('background-size','auto');
+	$('#contentArea').css('height','510');
+	$('#basTab').css('background-size','100%,auto');
+
+
+}else{
+	$('#main').css('width','650');
+	$('#header').css('width','650');
+	$('#tabBar').css('height','52');
+	$('#tabBar').css('margin-top','30');
+	$('.tab').css('height','100%');
+	$('.tab').css('width','13%');
+	$('.tab').css('margin-top','0');
+	$('.tab').css('background-size','100%,auto');
+	$('#pop').css('background-size','100%');
+	$('#contentArea').css('height','400');
+	$('#basTab').css('background-size','170%');
+}
+
+};
+adjust()
+$(window).resize(function() {
+	x = window.innerWidth;
+	z = window.innerHeight;
+adjust();
+});
+// <!--load animate-->
+// $(window).load(function() {
+// $( "#load" ).fadeOut();
+// $('html, body').animate({scrollTop: $("#header").offset().top},10);
+// });
+
+</script>
+</html>
+
+
+
+
+
