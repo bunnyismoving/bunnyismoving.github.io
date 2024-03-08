@@ -26,6 +26,7 @@
 	</div>
 <div id="main">
 	<div id="pop">
+		<div id="linkArea" onclick="openLink('corp')"></div>
 		<div id="closePop" onclick="popCloseClick()"></div>
 	</div>
 		<div id="header" >
@@ -234,7 +235,7 @@
 			<div id="donateB" onclick="openLink('sup')"></div>
 			<div id="storeArea">
 				<div id="store1" class="store" onclick="openLink('shop')"></div>
-				<div id="store2" class="store"></div>
+				<div id="store2" class="store" onclick="openLink('corp')"></div>
 			</div>
 
 			<div id="socialMedia">
@@ -248,7 +249,7 @@
 			</div>
 			
 		</div>
-		<div id="adArea"></div>
+		<div id="adArea" onclick="openLink('adArea')"></div>
 		
 
 
@@ -258,6 +259,8 @@
   </body>
 
 <script>
+
+var onclickAdlink;
 
 $('#bg1').css('display','block');
 $('#eye1').css('display','block');
@@ -317,13 +320,15 @@ function finish(){
 
 	var adImg;
 	var adRam = getRandomIntAD(3);
-
-	if(adRam == 1){
-		adImg = "url('image/bas1.png')"
+	if(adRam == 0){
+		adImg = "url('image/ad-banner1.png')"
+		onclickAdlink = "shop"
+	}else if(adRam == 1){
+		adImg = "url('image/ad-banner2.png')"
+		onclickAdlink = "corp"
 	}else if(adRam == 2){
-		adImg = "url('image/bas2.png')"
-	}else if(adRam == 3){
-		adImg = "url('image/bas3.png')"
+		adImg = "url('image/ad-banner3.png')"
+		onclickAdlink = "corp"
 	}
 	$('#adArea').css({'background-image': adImg});
 	$('#imgResult').css({'display':'block'});
@@ -362,7 +367,14 @@ function openLink(i){
 		a="https://store.line.me/stickershop/author/108572/zh-Hant?lang=zh-Hant&utm_source=gnsh_staut"
 	}else if(i=='shop'){
 		a="https://myship.7-11.com.tw/general/detail/GM2212122639778"
+	}else if(i=='corp'){
+		a="https://www.hersendesign.com/pages/%E5%BB%A2%E7%89%A9%E5%85%94%E5%AD%90"
+	}else if(i=='adArea' && onclickAdlink=="shop"){
+		a="https://myship.7-11.com.tw/general/detail/GM2212122639778"
+	}else if(i=='adArea' && onclickAdlink=="corp"){
+		a="https://www.hersendesign.com/pages/%E5%BB%A2%E7%89%A9%E5%85%94%E5%AD%90"
 	}
+	
 	window.open(a,"_blank")
 }
 
