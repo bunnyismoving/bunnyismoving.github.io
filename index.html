@@ -262,6 +262,23 @@
 
 var onclickAdlink;
 
+function getRandomIntAD(max) {
+  		return Math.floor(Math.random() * max);
+	}
+	var adImg;
+	var adRam = getRandomIntAD(3);
+	if(adRam == 0){
+		adImg = "url('image/ad-banner1.png')"
+		onclickAdlink = "shop"
+	}else if(adRam == 1){
+		adImg = "url('image/ad-banner2.png')"
+		onclickAdlink = "corp"
+	}else if(adRam == 2){
+		adImg = "url('image/ad-banner3.png')"
+		onclickAdlink = "corp"
+	}
+	$('#adArea').css({'background-image': adImg});
+
 $('#bg1').css('display','block');
 $('#eye1').css('display','block');
 $('#mou1').css('display','block');
@@ -305,9 +322,7 @@ function randomProp(){
 
 function finish(){
 
-	function getRandomIntAD(max) {
-  		return Math.floor(Math.random() * max);
-	}
+
 
 	$('#tabBar').css({'display':'none'});
 	$('#nextIcon').css({'display':'none'});
@@ -318,19 +333,6 @@ function finish(){
 	$('#pop').css({'display':'block'});
 	$('#adArea').css({'display':'block'});
 
-	var adImg;
-	var adRam = getRandomIntAD(3);
-	if(adRam == 0){
-		adImg = "url('image/ad-banner1.png')"
-		onclickAdlink = "shop"
-	}else if(adRam == 1){
-		adImg = "url('image/ad-banner2.png')"
-		onclickAdlink = "corp"
-	}else if(adRam == 2){
-		adImg = "url('image/ad-banner3.png')"
-		onclickAdlink = "corp"
-	}
-	$('#adArea').css({'background-image': adImg});
 	$('#imgResult').css({'display':'block'});
 	//$('#whiteFrame').css({'display':'none'});
 	turnImg()
