@@ -234,7 +234,7 @@
 			<div id="press-save"></div>
 			<div id="donateB" onclick="openLink('sup')"></div>
 			<div id="storeArea">
-				<div id="store1" class="store" onclick="openLink('shop')"></div>
+				<div id="store1" class="store" onclick="openLink('')"></div>
 				<div id="store2" class="store" onclick="openLink('corp')"></div>
 			</div>
 
@@ -269,13 +269,13 @@ function getRandomIntAD(max) {
 	var adRam = getRandomIntAD(3);
 	if(adRam == 0){
 		adImg = "url('image/wallpapaer-AD.png')"
-		onclickAdlink = "shop"
+		onclickAdlink = "https://ko-fi.com/bunnyismoving"
 	}else if(adRam == 1){
 		adImg = "url('image/wallpapaer-AD.png')"
-		onclickAdlink = "shop"
+		onclickAdlink = "https://ko-fi.com/bunnyismoving"
 	}else if(adRam == 2){
 		adImg = "url('image/wallpapaer-AD.png')"
-		onclickAdlink = "shop"
+		onclickAdlink = "https://ko-fi.com/bunnyismoving"
 	}
 	$('#').css({'background-image': adImg});
 
@@ -371,9 +371,9 @@ function openLink(i){
 		a="https://famistore.famiport.com.tw/users/4744214"
 	}else if(i=='corp'){
 		a="https://ideasforweavers.com/collections/bunny-is-moving"
-	}else if(i=='' && onclickAdlink=="shop"){
+	}else if(i=='adArea' && onclickAdlink=="shop"){
 		a="https://bio.site/bunnyismoving"
-	}else if(i=='' && onclickAdlink=="corp"){
+	}else if(i=='adArea' && onclickAdlink=="corp"){
 		a="https://bio.site/bunnyismoving"
 	}
 	
