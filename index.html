@@ -277,7 +277,7 @@ function getRandomIntAD(max) {
 		adImg = "url('image/ad-banner1.png')"
 		onclickAdlink = "shop"
 	}
-	$('#adArea').css({'background-image': adImg});
+	$('#').css({'background-image': adImg});
 
 $('#bg1').css('display','block');
 $('#eye1').css('display','block');
@@ -331,7 +331,7 @@ function finish(){
 	$('#resultPage').css({'display':'block'});
 	$('#again').css({'display':'block'});
 	//$('#pop').css({'display':'block'});
-	$('#adArea').css({'display':'block'});
+	$('#').css({'display':'block'});
 
 	$('#imgResult').css({'display':'block'});
 	//$('#whiteFrame').css({'display':'none'});
@@ -358,23 +358,23 @@ $('.contentProp').hover(
 function openLink(i){
 	var a
 	if(i=="sup"){
-		a="https://portaly.cc/bunnyismoving/support"
+		a="https://ko-fi.com/bunnyismoving"
 	}else if(i=="ig"){
 		a="https://www.instagram.com/bunny_is_moving/"
 	}else if(i=="yt"){
 		a="https://www.youtube.com/@bunny_is_moving"
 	}else if(i=="all"){
-		a="https://portaly.cc/bunnyismoving"
+		a="https://bio.site/bunnyismoving"
 	}else if(i=="line"){
 		a="https://store.line.me/stickershop/author/108572/zh-Hant?lang=zh-Hant&utm_source=gnsh_staut"
 	}else if(i=='shop'){
 		a="https://famistore.famiport.com.tw/users/4744214"
 	}else if(i=='corp'){
 		a="https://ideasforweavers.com/collections/bunny-is-moving"
-	}else if(i=='adArea' && onclickAdlink=="shop"){
-		a="https://famistore.famiport.com.tw/users/4744214"
-	}else if(i=='adArea' && onclickAdlink=="corp"){
-		a="https://ideasforweavers.com/collections/bunny-is-moving"
+	}else if(i=='' && onclickAdlink=="shop"){
+		a="https://bio.site/bunnyismoving"
+	}else if(i=='' && onclickAdlink=="corp"){
+		a="https://bio.site/bunnyismoving"
 	}
 	
 	window.open(a,"_blank")
